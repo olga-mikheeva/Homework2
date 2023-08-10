@@ -4,7 +4,7 @@
 
 int InputNum(string message)
 {
-    Console.Write(message);
+    Console.WriteLine(message);
     int num = int.Parse(Console.ReadLine()!);
     return num;
 }
@@ -18,18 +18,8 @@ bool Weekend(int weekDay)
     return false;
 }
 
-bool ValidateWeekday(int number)
-{
-    if (number > 0 &&  number <= 7)
-    {
-        return true;
-    }
-    return false;
-}
-
-int weekDay = InputNum("Введите число: ");
-if (ValidateWeekday(weekDay))
-    if (Weekend(weekDay))
+int weekDay = InputNum("Введите число от 1 до 7: ");
+if (Weekend(weekDay))
 {
     Console.WriteLine("Да");
 }
